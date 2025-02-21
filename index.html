@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жарнама Сайты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Башкы бет</a></li>
+                <li><a href="#submit-ad">Жарнама жайгаштыруу</a></li>
+                <li><a href="#login" onclick="showLoginForm()">Кирүү</a></li>
+                <li><a href="#register" onclick="showRegisterForm()">Каттоо</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Каттоо формасы -->
+    <div id="register-form" class="form-container" style="display:none;">
+        <h2>Катталыңыз</h2>
+        <form id="register" action="#" method="post">
+            <input type="text" id="reg-name" placeholder="Аты-жөнүңүз" required>
+            <input type="email" id="reg-email" placeholder="Электрондук почта" required>
+            <input type="password" id="reg-password" placeholder="Сырсөз" required>
+            <button type="submit">Каттоо</button>
+        </form>
+    </div>
+
+    <!-- Кирүү формасы -->
+    <div id="login-form" class="form-container" style="display:none;">
+        <h2>Кирүү</h2>
+        <form id="login" action="#" method="post">
+            <input type="email" id="login-email" placeholder="Электрондук почта" required>
+            <input type="password" id="login-password" placeholder="Сырсөз" required>
+            <button type="submit">Кирүү</button>
+        </form>
+    </div>
+
+    <!-- Жарнама жайгаштыруу -->
+    <div id="submit-ad" class="form-container">
+        <h2>Жарнама жайгаштыруу</h2>
+        <form>
+            <input type="text" id="ad-title" placeholder="Жарнаманы аталышы" required>
+            <textarea id="ad-description" placeholder="Жарнаманы сүрөттөө" required></textarea>
+            <input type="file" id="ad-image" required>
+            <button type="submit">Жарнама жайгаштыруу</button>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
